@@ -2,34 +2,118 @@
 <html lang="zh">
 <head>
     <meta charset="UTF-8">
-    <title>Chaoya Hu | 个人主页</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chaoya Hu | Jilin University</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; max-width: 800px; margin: 40px auto; padding: 0 20px; color: #333; }
-        h1 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 10px; }
-        .info { background: #f9f9f9; padding: 20px; border-radius: 8px; border-left: 5px solid #3498db; }
-        .tag { display: inline-block; background: #3498db; color: white; padding: 2px 10px; border-radius: 4px; font-size: 0.9em; margin-right: 5px; margin-bottom: 5px; }
-        a { color: #3498db; text-decoration: none; }
-        a:hover { text-decoration: underline; }
+        :root { --primary: #004b97; --accent: #3498db; --text: #2c3e50; --bg: #ffffff; --light-gray: #f8f9fa; }
+        body { font-family: 'Inter', 'Segoe UI', Roboto, sans-serif; line-height: 1.7; color: var(--text); background: var(--bg); margin: 0; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 60px 25px; }
+        
+        /* 头部样式 */
+        header { display: flex; align-items: center; gap: 40px; margin-bottom: 60px; }
+        .avatar { width: 200px; height: 200px; background: #e9ecef; border-radius: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid #dee2e6; flex-shrink: 0; }
+        .intro-text h1 { margin: 0; font-size: 2.5em; color: var(--primary); font-weight: 800; }
+        .intro-text .title { font-size: 1.2em; color: #666; margin: 10px 0; }
+        .links { margin-top: 20px; display: flex; gap: 15px; flex-wrap: wrap; }
+        .links a { text-decoration: none; color: #444; font-size: 0.95em; background: var(--light-gray); padding: 6px 14px; border-radius: 20px; transition: 0.3s; border: 1px solid #eee; }
+        .links a:hover { background: var(--primary); color: white; border-color: var(--primary); }
+
+        /* 版块通用 */
+        h2 { font-size: 1.8em; color: var(--primary); border-bottom: 2px solid var(--light-gray); padding-bottom: 10px; margin-top: 50px; display: flex; align-items: center; gap: 10px; }
+        
+        /* 教育经历 */
+        .edu-item { margin-bottom: 20px; position: relative; padding-left: 20px; border-left: 3px solid #eee; }
+        .edu-item:hover { border-left-color: var(--primary); }
+        .edu-header { display: flex; justify-content: space-between; font-weight: bold; font-size: 1.1em; }
+        .edu-sub { color: #666; font-size: 0.95em; }
+
+        /* 研究方向专区 */
+        .research-card { background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%); padding: 25px; border-radius: 12px; margin-top: 20px; }
+        .research-tag { background: var(--primary); color: white; padding: 4px 12px; border-radius: 5px; font-size: 0.9em; }
+
+        /* 论文占位 */
+        .placeholder-box { border: 2px dashed #ddd; padding: 40px; text-align: center; color: #999; border-radius: 10px; margin-top: 20px; }
+
+        @media (max-width: 768px) {
+            header { flex-direction: column; text-align: center; }
+            .edu-header { flex-direction: column; }
+        }
     </style>
 </head>
 <body>
-    <h1>Chaoya Hu (胡超亚)</h1>
+
+<div class="container">
+    <header>
+        <div class="avatar">
+            <i class="fa-solid fa-user-tie fa-5x" style="color: #adb5bd;"></i>
+        </div>
+        <div class="intro-text">
+            <h1>Chaoya Hu (胡超亚)</h1>
+            <p class="title">PhD Student @ Jilin University</p>
+            <p><i class="fa-solid fa-location-dot"></i> Changchun, China</p>
+            <div class="links">
+                <a href="mailto:506676015@qq.com"><i class="fa-solid fa-envelope"></i> QQ Email</a>
+                <a href="mailto:huchaoya93@gmail.com"><i class="fa-solid fa-envelope"></i> Gmail</a>
+                <a href="https://github.com/chaoyahu" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+                <a href="#"><i class="fa-solid fa-graduation-cap"></i> Google Scholar</a>
+            </div>
+        </div>
+    </header>
+
+    <h2><i class="fa-solid fa-address-card"></i> About Me</h2>
+    <p>你好！我是胡超亚，目前在<b>吉林大学（JLU）</b>攻读博士学位。我的学术背景涵盖了测控技术、信息与通信工程。目前我的研究重点是<b>低光照图像增强 (Low-Light Image Enhancement)</b>，致力于通过深度学习技术提升极端光照条件下的视觉感知质量。</p>
+
+    <h2><i class="fa-solid fa-university"></i> Education</h2>
     
-    <div class="info">
-        <p>🎓 <strong>PhD Student</strong> at Jilin University</p>
-        <p>🔍 <strong>Research Interests:</strong> 
-            <span class="tag">Artificial Intelligence</span> 
-            <span class="tag">Computer Vision</span>
-        </p>
-        <p>📧 <strong>Email:</strong> your_email@example.com (这里你可以自己改成真实邮箱)</p>
+    <div class="edu-item">
+        <div class="edu-header">
+            <span>吉林大学 | Jilin University</span>
+            <span>2025.09 - 至今</span>
+        </div>
+        <div class="edu-sub">博士 (PhD Student) · 计算机应用技术</div>
     </div>
-    
-    <h2>About Me</h2>
-    <p>你好！欢迎来到我的个人主页。目前我在吉林大学攻读博士学位，主要研究方向为 AI 与计算机视觉。我对探索未知领域充满热情。</p>
-    
-    <h2>Publications / Projects</h2>
+
+    <div class="edu-item">
+        <div class="edu-header">
+            <span>吉林大学 | Jilin University</span>
+            <span>2022.09 - 2025.06</span>
+        </div>
+        <div class="edu-sub">硕士 (Master of Engineering) · 信息与通信工程</div>
+    </div>
+
+    <div class="edu-item">
+        <div class="edu-header">
+            <span>吉林大学 | Jilin University</span>
+            <span>2018.09 - 2022.06</span>
+        </div>
+        <div class="edu-sub">学士 (Bachelor of Engineering) · 测控技术与仪器</div>
+    </div>
+
+    <h2><i class="fa-solid fa-microscope"></i> Research Interests</h2>
+    <div class="research-card">
+        <p><span class="research-tag">Primary Focus</span> <strong>低光照图像增强 (Low-Light Image Enhancement)</strong></p>
+        <p style="font-size: 0.95em; color: #555;">
+            研究目标：解决在弱光环境下拍摄的图像亮度低、噪声大、色彩失真等问题。利用卷积神经网络 (CNN) 或 Transformer 模型进行端到端的亮度映射与细节修复。
+        </p>
+    </div>
+
+    <h2><i class="fa-solid fa-file-lines"></i> Publications & Projects</h2>
+    <div class="placeholder-box">
+        <i class="fa-solid fa-spinner fa-spin fa-2x"></i>
+        <p style="margin-top: 15px;">正在全力开展研究工作中，相关成果即将更新...</p>
+    </div>
+
+    <h2><i class="fa-solid fa-award"></i> Honors & Awards</h2>
     <ul>
-        <li>正在整理我的研究成果，敬请期待...</li>
+        <li>正在整理中...</li>
     </ul>
+
+</div>
+
+<footer style="text-align: center; padding: 40px; color: #999; font-size: 0.85em;">
+    &copy; 2026 Chaoya Hu. Built with GitHub Pages.
+</footer>
+
 </body>
 </html>
